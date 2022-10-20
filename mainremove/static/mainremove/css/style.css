@@ -1,0 +1,145 @@
+:root {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@0,200;0,300;0,400;0,500;0,600;0,700&display=swap');
+	--primary-color: #46c232;
+	--secondary-color: #fdfdfd;
+	--text-color: #363636;
+	--main-font: 'Montserrat', sans-serif;
+}
+
+header{
+	position: relative;
+	height: 100%;
+}
+.logo{
+	height: 100px;
+	background: var(--secondary-color);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.logo_img{
+	height: 60px;
+}
+
+.container{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 100px auto;
+}
+
+.main_form,.result_container{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+.remove_bg_img{
+	border-radius: 20px;
+	height: 400px;
+	width: 400px;
+	border: 2px var(--primary-color) dashed;
+}
+.btn_container{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	margin-top: 30px;
+}
+#limage
+  {
+  	position: relative;
+   	display: flex;
+    align-items: center;
+    justify-content: center;
+	height: 400px;
+	width: 400px;
+	background: var(--secondary-color);
+	border-radius: 20px;
+	border: 2px var(--primary-color) dashed;
+}
+#upload_img{
+	display: none;
+	border-radius: 20px;
+	height: 400px;
+	width: 400px;
+}
+#text_label{
+	font-family: var(--main-font);
+}
+#limage:hover{
+	background: #b2b2b240;
+}
+
+#lsubmit{
+	background: var(--primary-color);
+	padding: 10px 30px;
+	border-radius: 10px;
+	margin-top: 30px;
+	color: white;
+	font-family: var(--main-font);
+}
+.refresh,.dowland{
+	text-decoration: none;
+	padding: 10px 30px;
+	font-family: var(--main-font);
+	color: white;
+	border-radius: 10px;
+}
+.refresh{
+	background: #b2b2b2;
+}
+.dowland{
+	background: #96d587;
+}
+
+
+#loader{
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	left: 0;
+	top: 0;
+	background: #ffffff80;
+	z-index: 10;
+	border-radius: 20px;
+}
+
+
+@keyframes rotation {
+  25%,50%{
+  	transform: rotate(90deg);
+  }
+  75%,100% {
+  	transform: rotate(90deg);
+  }
+
+}
+@keyframes width_hange {
+
+  0%,25% {
+  	width:0;
+  }
+
+
+}
+
+.object_loader_wrapper{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	border: 2px solid var(--primary-color);
+	animation: rotation 2s infinite linear;
+}
+.object_loader{
+position: absolute;
+width: 30px;
+height:30px;
+left: 0;
+top: 0;
+background: var(--primary-color);
+animation: width_hange 2s infinite linear;
+}

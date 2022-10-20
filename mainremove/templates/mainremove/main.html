@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'mainremove/css/style.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'mainremove/img/favicon.ico' %}"/>
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header>
+        {% include "mainremove/includes/header.html" %}
+        </header>
+    <content >
+        {% block content %}
+        {% endblock %}
+        </content>
+
+    <footer>
+{% include "mainremove/includes/footer.html" %}
+        </footer>
+<script src="{% static 'mainremove/js/main.js' %}"></script>
+</body>

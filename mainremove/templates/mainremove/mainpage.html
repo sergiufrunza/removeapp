@@ -1,0 +1,37 @@
+{% extends "mainremove/main.html" %}
+
+
+{% block content %}
+<div class="container">
+{%if image %}
+<div class="result_container">
+	<img src="{{image}}" class="remove_bg_img">
+	<div class="btn_container">
+		<a href="." class="refresh">Refresh</a>
+		<a href="{{image}}"class="dowland" download="true">Dowland</a>
+	</div>
+</div>
+{%else%}
+<form method="post"  enctype="multipart/form-data" class="main_form">
+	{% csrf_token %}
+  <input type="file" id="fimage" name="fimage" accept="image/*" hidden="true"><br>
+  <label for="fimage" id="limage">
+  		<div id="loader">
+  			<div class="object_loader_wrapper">
+  				<div class="object_loader">
+  					
+  				</div>
+  			</div>
+  			
+  		</div>
+  	<span id="text_label">
+  		Choose File
+  	</span>
+  	<img scr="" id="upload_img">
+  </label>
+  <input type="submit" id="fsubmit" name="fsubmit" hidden="true">
+  <label for="fsubmit" id="lsubmit">Remove bg</label>
+</form>
+{%endif%}
+</div>
+{% endblock %}
